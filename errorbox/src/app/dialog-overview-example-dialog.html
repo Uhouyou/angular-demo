@@ -1,0 +1,8 @@
+<h1 mat-dialog-title style="color:#FF0000">{{data.code}}</h1>
+<div mat-dialog-content style="color:#FF0000">
+    {{data.message}}
+</div>
+<div mat-dialog-actions>
+<button mat-button (click)="onNoClick()" style="color:#069">No Thanks</button>
+<button mat-button [mat-dialog-close] cdkFocusInitial style="color:#069">Ok</button>
+</div>

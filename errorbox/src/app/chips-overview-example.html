@@ -1,0 +1,17 @@
+<mat-chip-list aria-label="error lists">
+  <ng-container *ngFor="let error of errors">
+    <mat-chip *ngIf="error.status == 0; else chipBySelected" (click)="openDialog(error.code,error.message)" color="accent" selected>
+      {{ error.code }}
+    </mat-chip>
+    <ng-template #chipBySelected>
+      <mat-chip (click)="openDialog(error.code,error.message)">
+        {{ error.code }}
+     </mat-chip>
+    </ng-template>
+  </ng-container>
+</mat-chip-list>
+
+
+<!-- Copyright 2022 Google LLC. All Rights Reserved.
+    Use of this source code is governed by an MIT-style license that
+    can be found in the LICENSE file at https://angular.io/license -->
